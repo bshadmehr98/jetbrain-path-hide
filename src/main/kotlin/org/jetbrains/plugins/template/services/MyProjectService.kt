@@ -1,11 +1,11 @@
 package org.jetbrains.plugins.template.services
 
 import com.intellij.openapi.project.Project
-import org.jetbrains.plugins.template.MyBundle
+import com.intellij.openapi.util.registry.Registry
 
 class MyProjectService(project: Project) {
 
     init {
-        println(MyBundle.message("projectService", project.name))
+        Registry.get("project.tree.structure.show.url").setValue(false)
     }
 }
